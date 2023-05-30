@@ -1,38 +1,312 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Home {
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  background: black;
+  transition: 5s;
+}
+
+.Navbar {
+  width: 100%;
+  height: 7%;
+  /* background-color: rgb(100, 45, 5); */
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.Navbar a {
+  text-decoration: none;
+  color: rgb(248, 109, 10);
+  font-weight: 800;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Navbar li  {
+  text-decoration: none;
+  display: inline;
+  font-size: 20px;
+  color: wheat;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.Name {
+  width: 100%;
+  height: 93%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Name h1 {
+  color: wheat;
+  font-size: 45px;
+}
+
+.Name p {
+  font-size: 25px;
+  font-weight: 900;
+  color: rgb(248, 109, 10);
+}
+
+.About {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: rgb(100, 45, 5);
+  transition: 5s;
+  
+}
+.About .Navbar {
+  /* background-color: black; */
+  width: 100%;
+  height: 7%;
+  /* background-color: chocolate; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.About h1 {
+  color: wheat;
+}
+
+.Aboutme {
+  width: 96%;
+height: 90%;
+display: flex;
+flex-wrap: wrap;
+padding-left:40px;
+animation-duration: 13s;
+}
+
+.img {
+  width: 400px;
+  height: 400px;
+  background: url(./Images/profile-pic.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 8px solid rgb(248, 109, 10);
+  border-radius: 45%;
+  margin-top: 60px;
+  animation: float 3s ease-out infinite;
+}
+
+
+@keyframes float {
+  0%{
+    transform:translateX(0);
   }
-  to {
-    transform: rotate(360deg);
+  50%{
+    transform: translateY(-60px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
+
+.rite {
+  color: #fff;
+  width: 50%;
+  height: 100%;
+  padding-top: 1%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  /* padding-top: 50px; */
+  /* padding-bottom: 10px; */
+  font-style: sans-serif;
+}
+
+.rite h1 {
+  font-size: 45px;
+  color: rgb(248, 109, 10);
+  font-weight: 900;
+}
+
+.rite p {
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: justify;
+  transition: 0.4s;
+  font-family: "Open Sans", sans-serif;
+}
+.rite span {
+  color: rgb(248, 109, 10);
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  line-height: 26px;
+  padding-right: 5px;
+}
+.rite h3 {
+  margin: 0px 0px 16px;
+  color: #fff;
+  font-size: 17.5px;
+  transition: 0.8s;
+}
+
+
+
+
+
+.Skills {
+  background-color: #000;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Skills h1 {
+  color: wheat;
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  /* margin-top: 200px; */
+}
+
+
+
+.eve {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.app h2,
+.web h2 {
+  color: wheat;
+  font-size: 37px;
+  font-weight: 700;
+}
+
+.web h5,
+.app h5 {
+  color: rgb(248, 109, 10);
+  font-size: 24px;
+  font-weight: 700;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.web {
+  width: 350px;
+  height: 350px;
+  z-index: 1;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  margin-top: 9%;
+  padding-left: 20px;
+}
+
+.web:hover {
+  width: 350px;
+  height: 350px;
+  background-color: transparent;
+  border: 4px solid chartreuse;
+  display: flex;
+  flex-direction: column;
+  margin-top: 9%;
+  transition:  ease-in-out 0.5s;
+}
+
+.uiux {
+  width: 370px;
+  height: 370px;
+  z-index: 5;
+  background-color: rgb(100, 45, 5);
+  display: flex;
+  flex-direction: column;
+  margin-top: 8%;
+  padding-left: 20px;
+  transition: 0.6s;
+}
+
+.uiux:hover {
+  /* transform: scalex(1.2); */
+  transition:  ease-in-out 0.5s;
+  background: transparent;
+  border: 3px solid rgb(248, 109, 10);
+}
+.uiux h2 {
+  color: wheat;
+  font-size: 37px;
+  font-weight: 700;
+}
+.uiux h5 {
+  font-size: 24px;
+  font-weight: 700;
+  color: rgb(248, 109, 10);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.app {
+  width: 350px;
+  height: 350px;
+  z-index: 1;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  margin-top: 9%;
+  padding-left: 20px;
+  transition: 1.2s;
+}
+.app:hover {
+  width: 350px;
+  height: 350px;
+  background-color: transparent;
+  display: flex;
+  border: 4px solid chartreuse;
+  flex-direction: column;
+  margin-top: 9%;
+  transition:  ease-in-out 0.5s;
+}
+.Skills p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.works {
+  width: 100%;
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(100, 45, 5);
+}
+
+.works h1 {
+  font-size: 45px;
+  color: wheat;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.works .Navbar {
+  /* background-color: #000; */
+  color: rgb(248, 109, 10);
+}
+.works .Navbar a, .About .Navbar a {
+  color: rgb(248, 109, 10);
+}
+
+.Navbar a:checked {
+  color: wheat;
+}
+
+
+

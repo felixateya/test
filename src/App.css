@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  /* transition: 2s ease; */
 }
 
 .Home {
@@ -8,7 +9,8 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background: black;
+  /* background: black; */
+  background: linear-gradient( black, chocolate,  black) ;
   transition: 5s;
 }
 
@@ -62,7 +64,8 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background: rgb(100, 45, 5);
+  /* background: rgb(100, 45, 5); */
+  background: linear-gradient( chocolate, black,  chocolate) ;
   transition: 5s;
   
 }
@@ -159,7 +162,8 @@ animation-duration: 13s;
 
 
 .Skills {
-  background-color: #000;
+  background: linear-gradient( black, chocolate,  black) ;
+  /* background: conic-gradient( #ff0000, #00ff00, #0000ff); */
   width: 100%;
   height: 100vh;
   display: flex;
@@ -285,7 +289,9 @@ animation-duration: 13s;
   height:100vh;
   display: flex;
   flex-direction: column;
-  background-color: rgb(100, 45, 5);
+  /* background-color: rgb(100, 45, 5); */
+  background: linear-gradient( chocolate, black,  chocolate) ;
+
 }
 
 .works h1 {
@@ -301,12 +307,125 @@ animation-duration: 13s;
   color: rgb(248, 109, 10);
 }
 .works .Navbar a, .About .Navbar a {
-  color: rgb(248, 109, 10);
+  color: rgb(37,39,52);
 }
 
 .Navbar a:checked {
   color: wheat;
 }
 
+.Clients {
+  width: 100%;
+  background: linear-gradient( black, chocolate,  black) ;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.Clients h1 {
+  color: wheat;
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+}
 
 
+
+
+
+
+/* FIGURE STYLING */
+
+@font-face {
+  font-family: "Exoct";
+  src: url("https://assets.codepen.io/1480814/films.EXH_____.ttf")
+}
+
+
+.figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+figure {
+  width: 35%;
+  height: 70%;
+  aspect-ratio: 1;
+  margin-left: 40px;
+  margin-top: 30px;
+  padding: 5px 20px 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 100%;
+  cursor: pointer;
+  position: relative;
+  filter: drop-shadow(0 0 20px rgb(0 0 0/50%));
+}
+figure:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: top/cover;
+  transform-origin: bottom;
+  /* filter: brightness(.9); */
+  transition: .5s;
+}
+figure:before {
+  background-image: url(https://assets.codepen.io/1480814/necro-back.jpg)
+}
+figure + figure:before {
+  background-image: url(https://assets.codepen.io/1480814/druid-bac.jpg)
+}
+.imgOne {
+  /* background:url(https://assets.codepen.io/1480814/necro.png); */
+  background: url(./Images/client-pic-2.png);
+  grid-area: 1/1;
+  width: 80%;
+  background-size: cover;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  /* filter: contrast(.8) brightness(.7); */
+  place-self: end center;
+  transition: .5s;
+}
+
+.imgTwo {
+  background:url(./Images/client-pic-3.png);
+  background-size: cover;
+  grid-area: 1/1;
+  width: 80%;
+  background-size: cover;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  /* filter: contrast(.8) brightness(.7); */
+  place-self: end center;
+  transition: .5s;
+}
+figcaption {
+  grid-area: 1/1;
+  width: calc(100% + 40px);
+  /* font-family: Exoct; */
+  color: #fff;
+  font-size: min(32px,5vmin);
+  text-align: center;
+  place-self: end center;
+  transform: perspective(500px) translateY(100%) rotateX(-90deg);
+  backface-visibility: hidden;
+  transform-origin: top;
+  background: #000;
+  transition: .5s;
+}
+figure:hover img {
+  width: 130%;
+  height: 255%;
+  filter: contrast(1);
+}
+figure:hover::before {
+  filter: brightness(.3);
+  transform: perspective(500px) rotateX(60deg);
+}
+figure:hover figcaption{
+  transform: perspective(500px)translateY(100%) rotateX(-30deg);
+}
